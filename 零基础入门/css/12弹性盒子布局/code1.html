@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实现垂直居中</title>
+    <style>
+        /* 方法1： 使用 margin: auto 上下左右居中显示 */
+        /* * {
+            margin: 0;
+            padding:0;
+        }
+        .parent {
+            background-color: grey;
+            width: 60%;
+            height: 400px;
+            margin: auto;  // 让有宽度的块级元素，水平居中
+            display: flex;
+        }
+        .child {
+            background-color: green;
+            width: 30%;
+            height: 100px;
+            margin: auto;
+        } */
+
+
+        /* 方式2： 使用 flex 容器的属性 justify-content 主轴居中， align-items 纵轴居中 */
+
+        /* * {
+            margin: 0;
+            padding:0;
+        }
+        .parent {
+            background-color: grey;
+            width: 60%;
+            height: 400px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .child {
+            background-color: green;
+            width: 30%;
+            height: 100px;
+           
+        } */
+    </style>
+</head>
+<body>
+    <!-- 利用 flex 布局实现一个垂直居中效果。
+        1. 绿色元素水平垂直居中
+        2. 调节浏览器宽度和宽度，灰色元素始终水平居中 -->
+        
+    <!-- 总结：外面的盒子水平居中需要指定宽度，再使用 margin:auto -->
+
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+
+</body>
+</html>

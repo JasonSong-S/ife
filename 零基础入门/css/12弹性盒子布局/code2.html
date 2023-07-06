@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航栏</title>
+    <style>
+        .first {
+            display: flex;
+        }
+        li {
+            list-style: none;
+            background-color: aquamarine;
+            text-align: center;
+        }
+        .left {
+            flex: 0 1 10%;
+            margin-right: 5%;
+        }
+        .contact {
+            margin-left: auto;
+            margin-right: 5%;
+            width: 10%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- 应用弹性盒子实现如下分块导航栏，CONTACT 总是在最右侧显示 实现效果如下
+            contact 始终出现在最右侧
+            自适应屏幕
+    -->
+    <!-- 总结：使用 margin-left:auto 让 contact 的左边距始终最大，就可以保持在最右侧 -->
+    <ul class="first">         
+        <li class="left">HOME</li>
+        <li class="left">BLOG</li>
+        <li class="left">ARTICLE</li>
+        <li class="contact">CONTACT</li>
+    </ul>
+</body>
+
+</html>
