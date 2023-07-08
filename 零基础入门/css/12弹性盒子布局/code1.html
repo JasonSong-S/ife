@@ -6,7 +6,9 @@
     <title>实现垂直居中</title>
     <style>
         /* 方法1： 使用 margin: auto 上下左右居中显示 */
-        /* * {
+        /* REVIEW 尝试使用 flex 嵌套，将 parent 也设置成 flex 项，自适应 */
+        /* NOTE  */
+        * {
             margin: 0;
             padding:0;
         }
@@ -14,15 +16,16 @@
             background-color: grey;
             width: 60%;
             height: 400px;
-            margin: auto;  // 让有宽度的块级元素，水平居中
-            display: flex;
+            margin: auto;  /* 让有宽度的块级元素，水平居中  */
+            display: flex; /* 不能省略，否则只能水平居中，加上了这个才能垂直居中 */
         }
         .child {
             background-color: green;
             width: 30%;
             height: 100px;
             margin: auto;
-        } */
+        } 
+
 
 
         /* 方式2： 使用 flex 容器的属性 justify-content 主轴居中， align-items 纵轴居中 */
@@ -46,13 +49,14 @@
             height: 100px;
            
         } */
+
+        
     </style>
 </head>
 <body>
     <!-- 利用 flex 布局实现一个垂直居中效果。
         1. 绿色元素水平垂直居中
         2. 调节浏览器宽度和宽度，灰色元素始终水平居中 -->
-        
     <!-- 总结：外面的盒子水平居中需要指定宽度，再使用 margin:auto -->
 
         <div class="parent">

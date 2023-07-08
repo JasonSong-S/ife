@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算金额</title>
+</head>
+
+<body>
+    <script>
+        /**
+         * @method calculateSum
+         * @param {number }price 打折前的总消费额
+         * @param {Boolean}vip 是否为 vip
+         * @return {number} 返回打折后的总金额
+        */
+        function calculateSum(price, vip) {
+            if (vip) {
+                price *= 0.98;
+                if (price >= 300) {
+                    price -= 30;
+                } else if (price >= 200) {
+                    price -= 10;
+                } else if (price >= 100) {
+                    price -= 5;
+                }
+            } else {
+                if (price >= 300) {
+                    price -= 30;
+                } else if (price >= 200) {
+                    price -= 10;
+                } else if (price >= 100) {
+                    price -= 5;
+                }
+            }
+            return price;
+        }
+       
+
+        /* REVIEW: 想法是将中间判断的重复代码封装成一个函数 */
+
+        // if (price >= 300) {
+        //     price -= 30;
+        // } else if (price >= 200) {
+        //     price -= 10;
+        // } else if (price >= 100) {
+        //     price -= 5;
+        // }
+
+
+        /**
+         * @method minusPrice
+         * @param {number }price 参与满减的消费额
+         * @return {number} 返回满减后的金额
+        */
+
+        function minusPrice(price) {
+            if (price >= 300) {
+                price -= 30;
+            } else if (price >= 200) {
+                price -= 10;
+            } else if (price >= 100) {
+                price -= 5;
+            }
+            return price;  // 易错，函数需要返回值，否则拿不到计算的结果
+        }
+
+        function calculateSum(price, vip) {
+            if (vip) {
+                price *= 0.98;
+                return minusPrice(price);  // 易错，函数需要返回值，否则拿不到计算的结果
+            } else {
+                return minusPrice(price);
+            }
+        }
+
+        // 测试用例
+        console.log(calculateSum(300, false)) // 270
+        console.log(calculateSum(300, true))  // 284
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>isNull 和 isUndefined</title>
+</head>
+
+<body>
+    <script>
+        /**
+         * @description 实现一个判断传入的参数是否为 undefined 类型，返回一个布尔值，如果是 undefined 为true，否之，为false
+         * @method isUndefined
+         * @param arg 任意数据类型的变量
+         * @return {Boolean} 如何是数字类型返回 true ，如果不是 返回 false。
+         */
+
+        function isUndefined(arg) {
+            return typeof arg === "undefined";
+        }
+
+        /**
+         * @description 实现一个判断传入的参数是否为 null 类型，返回一个布尔值，如果是 undefined 为true，否之，为false
+         * @method isNull
+         * @param arg 任意数据类型的变量
+         * @return {Boolean} 如何是数字类型返回 true ，如果不是 返回 false。
+         */
+
+        function isNull(arg){
+            if( typeof arg !== "object"){  
+                return false; // 除了 null 和 object 都返回 false
+            }else{
+                if (arg == undefined){
+                    return true;  // 利用null 和 undefined 相等的特性
+                }
+                return false;
+            }
+        }
+
+        // 测试用例
+        var expUndefined = undefined;
+        var expNull = null;
+        var expZero = 0;
+        var a;
+        var o = new Object();
+        console.log(isUndefined(expUndefined)); // ->true
+        console.log(isUndefined(expNull)); // ->false
+        console.log(isUndefined(a)); // ->true
+        console.log(isUndefined(o)); // ->false   typeof o === "object"
+        console.log(isNull(expUndefined)); // ->false
+        console.log(isNull(expNull)); // ->true
+        console.log(isNull(expZero)); // ->false
+        console.log(isNull(a)); // ->false
+        console.log(isNull(o)); // ->false
+    </script>
+</body>
+
+</html>

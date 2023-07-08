@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算 BMI </title>
+</head>
+
+<body>
+    <script>
+        // 计算 BMI， 公式为 BMI = 体重 / 身高的平方
+        /**
+         * @description 计算 BMI， 公式为 BMI = 体重 / 身高的平方
+         * @method calculateBMI
+         * @return 控制台打印的值
+        */
+
+        function calculateBMI() {
+            let height = prompt("请输入身高，单位 m");
+            let weight = prompt("请输入体重，单位 kg");
+            let BMI;
+            BMI = weight / height ** 2;
+            return console.log(Math.round(BMI))
+        }
+        calculateBMI()
+
+    </script>
+</body>
+
+</html>
