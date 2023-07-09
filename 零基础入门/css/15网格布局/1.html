@@ -83,13 +83,14 @@
 
         <script>
 
-            var o = new Object();
-            console.log(typeof o);
+            function sleep() {
+                console.log("I'm sleepy!");
+                return "我睡着了";
+                return "我在打呼";
+            }
 
-
-
-
-
+            let a = sleep();
+            // console.log(a);
 
         </script>
     </body>

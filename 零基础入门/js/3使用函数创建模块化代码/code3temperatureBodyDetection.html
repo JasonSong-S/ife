@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>回调函数-体温打卡</title>
+</head>
+<body>
+    <script>
+        /**
+         * @method temperatureBodyDetection 
+         * @param {function }success 体温正常执行的回调
+         * @param {function}fail 体温异常执行的回调
+         * @return {string} 
+        */
+
+        let bodyTemp = +prompt("请输入您的体温","36");
+
+        function temperatureBodyDetection(success,fail){
+            if (bodyTemp > 36 && bodyTemp < 38){
+                success()
+            }else{
+                fail()
+            }
+        }
+
+        let success = ()=>{
+            return console.log("体温正常，打卡成功");
+        }
+
+        let fail = ()=>{
+            return console.log("体温异常，打卡失败");
+        }
+
+        temperatureBodyDetection(success,fail)
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数表达式重写 showMessage</title>
+</head>
+<body>
+    <script>
+        /**
+         * QUIZ REQUIREMENTS
+         * - Your code should have a `showMessage()` function
+         * - Your code should print `\"hello,stranger!\"` by calling the `showMessage()` function inside `console.log()`
+         * - BE CAREFUL ABOUT THE PUNCTUATION AND THE EXACT WORDS TO BE PRINTED.
+         */
+
+          /**
+         * @description 控制台打印函数的结果你好，陌生人
+         * @method showMessage
+         * @return {String} "hello,stranger!"
+         */
+
+        //  let showMessage = function() {
+        //     console.log("hello stranger");
+        //  }
+
+        //  箭头函数
+        // let showMessage = ()=>{
+        //     console.log("hello stranger");
+        // }
+
+        //  测试
+        //  showMessage()
+
+
+
+         /**
+         * @description 使用 setTimeout 与匿名函数在网页中显示一条打招呼的消息,
+         *   内容还是为“您好”和提供该输入的人员的姓名，这条消息延迟 1 秒后再显示。
+         * @method showMessage
+         * @return {String} "hello,stranger!"
+         */
+
+         let name = prompt("请输入你的名字","jason");
+         setTimeout(()=>{ console.log(`hello ${name}`);}, 1000);
+
+    </script>
+    
+</body>
+</html>

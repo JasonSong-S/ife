@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>控制台打印函数的结果你好，陌生人</title>
+</head>
+
+<body>
+    <script>
+        /**
+         * QUIZ REQUIREMENTS
+         * - Your code should have a `showMessage()` function
+         * - Your code should print `\"hello,stranger!\"` by calling the `showMessage()` function inside `console.log()`
+         * - BE CAREFUL ABOUT THE PUNCTUATION AND THE EXACT WORDS TO BE PRINTED.
+         */
+
+          /**
+         * @description 控制台打印函数的结果你好，陌生人
+         * @method showMessage
+         * @return {String} "hello,stranger!"
+         */
+
+        function showMessage(){
+            return "hello,stranger!";
+        }
+        
+         /**
+         * @description 控制台打印函数的结果你好，和提供该输入的人员的姓名
+         * @method showMessage
+         * @return {String} "hello,stranger!"
+         */
+
+         function showMessage(){
+            let name = prompt("请输入你的名字！","jason")
+            return `hello,${name}!`;
+        }
+        
+        // 测试
+        console.log(showMessage());
+    </script>
+</body>
+
+</html>
